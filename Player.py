@@ -6,10 +6,13 @@ from tkinter import *
 from tkinter.ttk import *
 
 
+#Gets all the info about the screen
 screenInfo = Tk()
 screenHeight = screenInfo.winfo_screenheight()
 screenWidth = screenInfo.winfo_screenwidth()
 keepTrying = True
+#Keeps track of the current decsisions such as having gone left
+currnetDecision = []
 #Testing command inputs
 keyboard = KeyboardController()
 
@@ -28,7 +31,7 @@ def turnDown():
 
 
 
-#Test for playing constantly
+#Test for playing constantly and using screenshots
 while keepTrying:
     time.sleep(10)
     print(screenHeight)
