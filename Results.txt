@@ -1,0 +1,12 @@
+
+
+
+Figure is a I figure :(Turning Right)(Turning Left)(Turning Left)(Turning Right)(Turning Right)(Turning Left)(Turning Right)[image nr 3206637997.jpg];score=34
+
+Figure is a O figure :(Turning Left)(Turning Left)(Turning Right)(Turning Left)(Turning Left)(Turning Left)(Turning Left)[image nr 6803230324.jpg];score=90
+
+Figure is a Z figure :(Turning Right)(Turning Right)(Turning Left)(Turning Left)(Turning Left)(Turning Right)(Turning Right)[image nr 7829324137.jpg];score=132
+
+Figure is a J figure :(Turning Right)(Turning Right)(Turning Right)(Turning Left)(Turning Right)(Turning Left)(Turning Right)[image nr 9725599311.jpg];score=158
+
+Figure is a I figure :(Turning Left)(Turning Right)(Turning Right)(Turning Right)(Turning Right)(Turning Left)(Turning Left)[image nr 7899512412.jpg];score=170
