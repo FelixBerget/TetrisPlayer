@@ -32,6 +32,9 @@ anotherSecondBox = [486,96]
 anotherThirdbox = [519,96]
 anotherFourthBox = [545,96]
 
+gameOverTopCorner = [849,412]
+gameOverBottomCorner = [1083,469]
+
 randomDecision = [1,2]
 
 previousScore="0"
@@ -54,6 +57,15 @@ def isNotBlack(testTuple, currentSpot):
         isNotBlack = True
     return isNotBlack
 
+def isGameOver():
+    gameoverScreenshot = ImageGrab.grab(bbox = (849,412,1083,469))
+    pytesseract.tesseract_cmd = path_to_tesseract
+    textOver = pytesseract.image_to_string(gameoverScreenshot)
+    print(textOver)
+    if "GAME OVER" in textOver:
+        print("DOIN IT")
+        
+
 
 
 #Test for playing constantly and using screenshots
@@ -65,6 +77,7 @@ while keepTrying:
     scoreboard = ImageGrab.grab(bbox = (560,694,708,728))
     print(screenshot[458,66])
     testTuple = (15,15,15)
+    isGameOver()
     if isNotBlack(testTuple,screenshot[485,66]) and isNotBlack(testTuple,screenshot[518,66]) and isNotBlack(testTuple,screenshot[519,96]) and isNotBlack(testTuple,screenshot[486,96]):
         pytesseract.tesseract_cmd = path_to_tesseract
         imageNumber = random.randrange(1,10000000)
