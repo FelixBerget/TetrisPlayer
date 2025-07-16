@@ -63,7 +63,8 @@ def isGameOver():
     textOver = pytesseract.image_to_string(gameoverScreenshot)
     print(textOver)
     if "GAME OVER" in textOver:
-        print("DOIN IT")
+        return "GAME_OVER"
+    return "STILL_PLAYING"
         
 
 
@@ -77,7 +78,8 @@ while keepTrying:
     scoreboard = ImageGrab.grab(bbox = (560,694,708,728))
     print(screenshot[458,66])
     testTuple = (15,15,15)
-    isGameOver()
+    isItGameOver = ""
+    isItGameOver = isGameOver()
     if isNotBlack(testTuple,screenshot[485,66]) and isNotBlack(testTuple,screenshot[518,66]) and isNotBlack(testTuple,screenshot[519,96]) and isNotBlack(testTuple,screenshot[486,96]):
         pytesseract.tesseract_cmd = path_to_tesseract
         imageNumber = random.randrange(1,10000000)
@@ -94,16 +96,19 @@ while keepTrying:
                 turnLeft()
                 with open("Results.txt","a") as f:
                     f.write("(Turning Left)")
-        sendDown()
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
         score = pytesseract.image_to_string(scoreboard)
+        print(score)
         if score == "":
             score = previousScore
         with open("Results.txt","a") as f:
             f.write(f";score={score}")
         print(score)
+        sendDown()
+        with open("Results.txt","a") as f:
+            f.write(f"/{isItGameOver}")
         print("O figure")
         previousScore=score
         time.sleep(2)
@@ -127,13 +132,16 @@ while keepTrying:
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
-        sendDown()
         score = pytesseract.image_to_string(scoreboard)
+        print(score)
         if score == "":
             score = previousScore
         with open("Results.txt","a") as f:
             f.write(f";score={score}")
         print(score)
+        with open("Results.txt","a") as f:
+            f.write(f"/{isItGameOver}")
+        sendDown()
         print("I figure")
         previousScore=score
         time.sleep(2)
@@ -158,11 +166,14 @@ while keepTrying:
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
         score = pytesseract.image_to_string(scoreboard)
+        print(score)
         if score == "":
             score = previousScore
         with open("Results.txt","a") as f:
             f.write(f";score={score}")
         print(score)
+        with open("Results.txt","a") as f:
+            f.write(f"/{isItGameOver}")
         sendDown()
         print("J figure")
         previousScore=score
@@ -188,11 +199,14 @@ while keepTrying:
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
         score = pytesseract.image_to_string(scoreboard)
+        print(score)
         if score == "":
             score = previousScore
         with open("Results.txt","a") as f:
             f.write(f";score={score}")
         print(score)
+        with open("Results.txt","a") as f:
+            f.write(f"/{isItGameOver}")
         sendDown()
         print("L figure")
         previousScore=score
@@ -218,11 +232,14 @@ while keepTrying:
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
         score = pytesseract.image_to_string(scoreboard)
+        print(score)
         if score == "":
             score = previousScore
         with open("Results.txt","a") as f:
             f.write(f";score={score}")
         print(score)
+        with open("Results.txt","a") as f:
+            f.write(f"/{isItGameOver}")
         sendDown()
         print("S figure")
         previousScore=score
@@ -248,11 +265,14 @@ while keepTrying:
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
         score = pytesseract.image_to_string(scoreboard)
+        print(score)
         if score == "":
             score = previousScore
         with open("Results.txt","a") as f:
             f.write(f";score={score}")
         print(score)
+        with open("Results.txt","a") as f:
+            f.write(f"/{isItGameOver}")
         sendDown()
         print("Z figure")
         previousScore=score
@@ -278,11 +298,14 @@ while keepTrying:
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
         score = pytesseract.image_to_string(scoreboard)
+        print(score)
         if score == "":
             score = previousScore
         with open("Results.txt","a") as f:
             f.write(f";score={score}")
         print(score)
+        with open("Results.txt","a") as f:
+            f.write(f"/{isItGameOver}")
         sendDown()
         print("T figure")
         previousScore=score

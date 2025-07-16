@@ -1,0 +1,15 @@
+
+Figure is a O figure :(Turning Right)(Turning Left)(Turning Right)(Turning Right)(Turning Right)(Turning Left)(Turning Left)[image nr 5991412305.jpg];score=0/STILL_PLAYING
+Figure is a Z figure :(Turning Right)(Turning Left)(Turning Right)(Turning Right)(Turning Right)(Turning Right)(Turning Right)[image nr 2797354190.jpg];score=0/STILL_PLAYING
+Figure is a Z figure :(Turning Left)(Turning Right)(Turning Left)(Turning Left)(Turning Right)(Turning Left)(Turning Right)[image nr 3594393633.jpg];score=124
+/STILL_PLAYING
+Figure is a I figure :(Turning Left)(Turning Left)(Turning Left)(Turning Left)(Turning Left)(Turning Right)(Turning Right)[image nr 6650879996.jpg];score=124
+/STILL_PLAYING
+Figure is a O figure :(Turning Left)(Turning Left)(Turning Left)(Turning Left)(Turning Right)(Turning Left)(Turning Right)[image nr 1757489777.jpg];score=144
+/STILL_PLAYING
+Figure is a Z figure :(Turning Left)(Turning Right)(Turning Right)(Turning Left)(Turning Right)(Turning Left)(Turning Left)[image nr 4161744555.jpg];score=144
+/STILL_PLAYING
+Figure is a O figure :(Turning Right)(Turning Right)(Turning Right)(Turning Left)(Turning Left)(Turning Left)(Turning Left)[image nr 4127901336.jpg];score=144
+/GAME_OVER
+Figure is a Z figure :(Turning Right)(Turning Right)(Turning Left)(Turning Left)(Turning Left)(Turning Left)(Turning Right)[image nr 9700350885.jpg];score=144
+/GAME_OVER
