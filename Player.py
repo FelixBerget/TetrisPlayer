@@ -101,24 +101,24 @@ while keepTrying:
         imageNumberTwo = random.randrange(1,1000)
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
-            f.write("\nFigure is a O figure :")
+            f.write("\nO figure :")
         for x in range (7):
             rightScore = -oRightScore
             theNumber = random.randint(rightScore, oLeftScore)
             if theNumber < 0 :
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Right)")
+                    f.write("(Right ")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Left)")
+                    f.write("(Left ")
                     moreLeftOrRight = moreLeftOrRight + 1
                     
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
-            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
+            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
         print(score)
         if score == "":
@@ -128,7 +128,7 @@ while keepTrying:
         print(score)
         sendDown()
         with open("Results.txt","a") as f:
-            f.write(f"/{isItGameOver}")
+            f.write(f"*{isItGameOver}")
         print("O figure")
         numScore = int(score)
         numPrevScore = int(previousScore)
@@ -152,23 +152,23 @@ while keepTrying:
         imageNumberTwo = random.randrange(1,1000)
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
-            f.write("\nFigure is a I figure :")
+            f.write("\nI figure :")
         for x in range (7):
             rightScore = -iRightScore
             theNumber = random.randint(rightScore, iLeftScore)
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Right)")
+                    f.write("(Right ")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Left)")
+                    f.write("(Left ")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
-            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
+            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
         print(score)
         if score == "":
@@ -177,7 +177,7 @@ while keepTrying:
             f.write(f";score={score}")
         print(score)
         with open("Results.txt","a") as f:
-            f.write(f"/{isItGameOver}")
+            f.write(f"*{isItGameOver}")
         sendDown()
         print("I figure")
         numScore = int(score)
@@ -202,23 +202,23 @@ while keepTrying:
         imageNumberTwo = str(random.randrange(1,1000))
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
-            f.write("\nFigure is a J figure :")
+            f.write("\nJ figure :")
         for x in range (7):
             rightScore = -oRightScore
             theNumber = random.randint(rightScore, oLeftScore)
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Right)")
+                    f.write("(Right ")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Left)")
+                    f.write("(Left ")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
-            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
+            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
         print(score)
         if score == "":
@@ -227,7 +227,7 @@ while keepTrying:
             f.write(f";score={score}")
         print(score)
         with open("Results.txt","a") as f:
-            f.write(f"/{isItGameOver}")
+            f.write(f"*{isItGameOver}")
         sendDown()
         print("J figure")
         numScore = int(score)
@@ -252,23 +252,23 @@ while keepTrying:
         imageNumberTwo = random.randrange(1,1000)
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
-            f.write("\nFigure is a L figure :")
+            f.write("\nL figure :")
         for x in range (7):
             rightScore = -oRightScore
             theNumber = random.randint(rightScore, oLeftScore)
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Right)")
+                    f.write("(Right ")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Left)")
+                    f.write("(Left ")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
-            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
+            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
         print(score)
         if score == "":
@@ -277,7 +277,7 @@ while keepTrying:
             f.write(f";score={score}")
         print(score)
         with open("Results.txt","a") as f:
-            f.write(f"/{isItGameOver}")
+            f.write(f"*{isItGameOver}")
         sendDown()
         print("L figure")
         numScore = int(score)
@@ -302,23 +302,23 @@ while keepTrying:
         imageNumberTwo = random.randrange(1,1000)
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
-            f.write("\nFigure is a S figure :")
+            f.write("\nS figure :")
         for x in range (7):
             rightScore = -oRightScore
             theNumber = random.randint(rightScore, oLeftScore)
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Right)")
+                    f.write("(Right ")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Left)")
+                    f.write("(Left ")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
-            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
+            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
         print(score)
         if score == "":
@@ -327,7 +327,7 @@ while keepTrying:
             f.write(f";score={score}")
         print(score)
         with open("Results.txt","a") as f:
-            f.write(f"/{isItGameOver}")
+            f.write(f"*{isItGameOver}")
         sendDown()
         print("S figure")
         numScore = int(score)
@@ -352,23 +352,23 @@ while keepTrying:
         imageNumberTwo = random.randrange(1,1000)
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
-            f.write("\nFigure is a Z figure :")
+            f.write("\nZ figure :")
         for x in range (7):
             rightScore = -oRightScore
             theNumber = random.randint(rightScore, oLeftScore)
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Right)")
+                    f.write("(Right ")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Left)")
+                    f.write("Left ")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
-            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
+            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
         print(score)
         if score == "":
@@ -377,7 +377,7 @@ while keepTrying:
             f.write(f";score={score}")
         print(score)
         with open("Results.txt","a") as f:
-            f.write(f"/{isItGameOver}")
+            f.write(f"*{isItGameOver}")
         sendDown()
         print("Z figure")
         numScore = int(score)
@@ -402,23 +402,23 @@ while keepTrying:
         imageNumberTwo = random.randrange(1,1000)
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
-            f.write("\nFigure is a Z figure :")
+            f.write("\nZ figure :")
         for x in range (7):
             rightScore = -oRightScore
             theNumber = random.randint(rightScore, oLeftScore)
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Right)")
+                    f.write("(Right ")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Turning Left)")
+                    f.write("(Left ")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
-            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg]")
+            f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
         print(score)
         if score == "":
@@ -427,7 +427,7 @@ while keepTrying:
             f.write(f";score={score}")
         print(score)
         with open("Results.txt","a") as f:
-            f.write(f"/{isItGameOver}")
+            f.write(f"*{isItGameOver}")
         sendDown()
         print("T figure")
         numScore = int(score)
