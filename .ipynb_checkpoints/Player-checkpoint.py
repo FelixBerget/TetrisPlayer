@@ -61,6 +61,14 @@ def turnRight():
     keyboard.press(Key.right)
     keyboard.release(Key.right)
 
+def rotateRight():
+    keyboard.press(Key.Up)
+    keyboard.relase(Key.Up)
+
+def rotateLeft():
+    keyboard.press("z")
+    keyboard.release("z")
+
 def sendDown():
     keyboard.press(Key.space)
     keyboard.release(Key.space)
@@ -108,12 +116,12 @@ while keepTrying:
             if theNumber < 0 :
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Right ")
+                    f.write("(Right")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Left ")
+                    f.write("(Left")
                     moreLeftOrRight = moreLeftOrRight + 1
                     
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
@@ -159,12 +167,12 @@ while keepTrying:
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Right ")
+                    f.write("(Right")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Left ")
+                    f.write("(Left")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
@@ -209,12 +217,12 @@ while keepTrying:
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Right ")
+                    f.write("(Right")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Left ")
+                    f.write("(Left")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
@@ -259,12 +267,12 @@ while keepTrying:
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Right ")
+                    f.write("(Right")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Left ")
+                    f.write("(Left")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
@@ -309,12 +317,12 @@ while keepTrying:
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Right ")
+                    f.write("(Right")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Left ")
+                    f.write("(Left")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
@@ -359,12 +367,12 @@ while keepTrying:
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Right ")
+                    f.write("(Right")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("Left ")
+                    f.write("(Left")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
@@ -409,12 +417,12 @@ while keepTrying:
             if theNumber < 0:
                 turnRight()
                 with open("Results.txt","a") as f:
-                    f.write("(Right ")
+                    f.write("(Right")
                     moreLeftOrRight = moreLeftOrRight - 1
             if theNumber > 0:
                 turnLeft()
                 with open("Results.txt","a") as f:
-                    f.write("(Left ")
+                    f.write("(Left")
                     moreLeftOrRight = moreLeftOrRight + 1
         screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
