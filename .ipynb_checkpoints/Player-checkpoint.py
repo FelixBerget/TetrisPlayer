@@ -62,8 +62,8 @@ def turnRight():
     keyboard.release(Key.right)
 
 def rotateRight():
-    keyboard.press(Key.Up)
-    keyboard.relase(Key.Up)
+    keyboard.press(Key.up)
+    keyboard.release(Key.up)
 
 def rotateLeft():
     keyboard.press("z")
@@ -72,6 +72,10 @@ def rotateLeft():
 def sendDown():
     keyboard.press(Key.space)
     keyboard.release(Key.space)
+
+def restartGame():
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
 
 def isNotBlack(testTuple, currentSpot):
     isNotBlack = False
@@ -93,9 +97,10 @@ def isGameOver():
 
 
 #Test for playing constantly and using screenshots
-time.sleep(5)
+time.sleep(3.5)
 while keepTrying:
-    time.sleep(0.5)
+    time.sleep(0.4)
+    restartGame()
     screenshot = ImageGrab.grab(bbox =(450,217,1450,964)).load()
     screenshotTwo = ImageGrab.grab(bbox =(450,217,1450,964))
     scoreboard = ImageGrab.grab(bbox = (560,694,708,728))
@@ -110,21 +115,28 @@ while keepTrying:
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
             f.write("\nO figure :")
-        for x in range (7):
+        for x in range (3):
             rightScore = -oRightScore
-            theNumber = random.randint(rightScore, oLeftScore)
-            if theNumber < 0 :
+            theNumber = random.randint(-2, 2)
+            if theNumber == 1 :
                 turnRight()
                 with open("Results.txt","a") as f:
                     f.write("(Right")
-                    moreLeftOrRight = moreLeftOrRight - 1
-            if theNumber > 0:
+            if theNumber == -1:
                 turnLeft()
                 with open("Results.txt","a") as f:
                     f.write("(Left")
-                    moreLeftOrRight = moreLeftOrRight + 1
-                    
-        screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
+            if theNumber == 2:
+                rotateRight()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateRight")
+            if theNumber == -2:
+                rotateLeft()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateLeft")
+
+        if isItGameOver == "STILL_PLAYING":
+            screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
@@ -152,7 +164,7 @@ while keepTrying:
         print (oRightScore)
         print (oLeftScore)
         previousScore=score
-        time.sleep(2)
+        time.sleep(0.5)
 
     if isNotBlack(testTuple,screenshot[545,96]) and isNotBlack(testTuple,screenshot[455,96]) and isNotBlack(testTuple,screenshot[519,96]) and isNotBlack(testTuple,screenshot[486,96]):
         pytesseract.tesseract_cmd = path_to_tesseract
@@ -161,20 +173,30 @@ while keepTrying:
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
             f.write("\nI figure :")
-        for x in range (7):
-            rightScore = -iRightScore
-            theNumber = random.randint(rightScore, iLeftScore)
-            if theNumber < 0:
+        for x in range (3):
+            rightScore = -oRightScore
+            theNumber = random.randint(-2, 2)
+            if theNumber == 1 :
                 turnRight()
                 with open("Results.txt","a") as f:
                     f.write("(Right")
-                    moreLeftOrRight = moreLeftOrRight - 1
-            if theNumber > 0:
+            if theNumber == -1:
                 turnLeft()
                 with open("Results.txt","a") as f:
                     f.write("(Left")
-                    moreLeftOrRight = moreLeftOrRight + 1
-        screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
+            if theNumber == 2:
+                rotateRight()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateRight")
+            if theNumber == -2:
+                rotateLeft()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateLeft")
+                    
+                    
+
+        if isItGameOver == "STILL_PLAYING":
+            screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
@@ -201,8 +223,9 @@ while keepTrying:
         print ("!I SCORES!")
         print (iRightScore)
         print (iLeftScore)
+        restartGame()
         previousScore=score
-        time.sleep(2)
+        time.sleep(0.5)
 
     if isNotBlack(testTuple,screenshot[458,66]) and isNotBlack(testTuple,screenshot[455,96]) and isNotBlack(testTuple,screenshot[519,96]) and isNotBlack(testTuple,screenshot[486,96]):
         pytesseract.tesseract_cmd = path_to_tesseract
@@ -211,20 +234,30 @@ while keepTrying:
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
             f.write("\nJ figure :")
-        for x in range (7):
+        for x in range (3):
             rightScore = -oRightScore
-            theNumber = random.randint(rightScore, oLeftScore)
-            if theNumber < 0:
+            theNumber = random.randint(-2, 2)
+            if theNumber == 1 :
                 turnRight()
                 with open("Results.txt","a") as f:
                     f.write("(Right")
-                    moreLeftOrRight = moreLeftOrRight - 1
-            if theNumber > 0:
+            if theNumber == -1:
                 turnLeft()
                 with open("Results.txt","a") as f:
                     f.write("(Left")
-                    moreLeftOrRight = moreLeftOrRight + 1
-        screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
+            if theNumber == 2:
+                rotateRight()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateRight")
+            if theNumber == -2:
+                rotateLeft()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateLeft")
+                    
+                    
+
+        if isItGameOver == "STILL_PLAYING":
+            screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
@@ -252,7 +285,7 @@ while keepTrying:
         print (jRightScore)
         print (jLeftScore)
         previousScore=score
-        time.sleep(2)
+        time.sleep(0.5)
 
     if isNotBlack(testTuple,screenshot[455,96]) and isNotBlack(testTuple,screenshot[519,96]) and isNotBlack(testTuple,screenshot[518,66]) and isNotBlack(testTuple,screenshot[486,96]):
         pytesseract.tesseract_cmd = path_to_tesseract
@@ -261,20 +294,30 @@ while keepTrying:
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
             f.write("\nL figure :")
-        for x in range (7):
+        for x in range (3):
             rightScore = -oRightScore
-            theNumber = random.randint(rightScore, oLeftScore)
-            if theNumber < 0:
+            theNumber = random.randint(-2, 2)
+            if theNumber == 1 :
                 turnRight()
                 with open("Results.txt","a") as f:
                     f.write("(Right")
-                    moreLeftOrRight = moreLeftOrRight - 1
-            if theNumber > 0:
+            if theNumber == -1:
                 turnLeft()
                 with open("Results.txt","a") as f:
                     f.write("(Left")
-                    moreLeftOrRight = moreLeftOrRight + 1
-        screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
+            if theNumber == 2:
+                rotateRight()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateRight")
+            if theNumber == -2:
+                rotateLeft()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateLeft")
+                    
+                    
+
+        if isItGameOver == "STILL_PLAYING":
+            screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
@@ -302,7 +345,7 @@ while keepTrying:
         print (lRightScore)
         print (lLeftScore)
         previousScore=score
-        time.sleep(2)
+        time.sleep(0.5)
 
     if isNotBlack(testTuple,screenshot[485,66]) and isNotBlack(testTuple,screenshot[518,66]) and isNotBlack(testTuple,screenshot[455,96]) and isNotBlack(testTuple,screenshot[486,96]):
         pytesseract.tesseract_cmd = path_to_tesseract
@@ -311,20 +354,30 @@ while keepTrying:
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
             f.write("\nS figure :")
-        for x in range (7):
+        for x in range (3):
             rightScore = -oRightScore
-            theNumber = random.randint(rightScore, oLeftScore)
-            if theNumber < 0:
+            theNumber = random.randint(-2, 2)
+            if theNumber == 1 :
                 turnRight()
                 with open("Results.txt","a") as f:
                     f.write("(Right")
-                    moreLeftOrRight = moreLeftOrRight - 1
-            if theNumber > 0:
+            if theNumber == -1:
                 turnLeft()
                 with open("Results.txt","a") as f:
                     f.write("(Left")
-                    moreLeftOrRight = moreLeftOrRight + 1
-        screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
+            if theNumber == 2:
+                rotateRight()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateRight")
+            if theNumber == -2:
+                rotateLeft()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateLeft")
+                    
+                    
+
+        if isItGameOver == "STILL_PLAYING":
+            screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
@@ -352,7 +405,7 @@ while keepTrying:
         print (sRightScore)
         print (sLeftScore)
         previousScore=score
-        time.sleep(2)
+        time.sleep(0.5)
 
     if isNotBlack(testTuple,screenshot[485,66]) and isNotBlack(testTuple,screenshot[458,66]) and isNotBlack(testTuple,screenshot[519,96]) and isNotBlack(testTuple,screenshot[486,96]):
         pytesseract.tesseract_cmd = path_to_tesseract
@@ -361,20 +414,30 @@ while keepTrying:
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
             f.write("\nZ figure :")
-        for x in range (7):
+        for x in range (3):
             rightScore = -oRightScore
-            theNumber = random.randint(rightScore, oLeftScore)
-            if theNumber < 0:
+            theNumber = random.randint(-2, 2)
+            if theNumber == 1 :
                 turnRight()
                 with open("Results.txt","a") as f:
                     f.write("(Right")
-                    moreLeftOrRight = moreLeftOrRight - 1
-            if theNumber > 0:
+            if theNumber == -1:
                 turnLeft()
                 with open("Results.txt","a") as f:
                     f.write("(Left")
-                    moreLeftOrRight = moreLeftOrRight + 1
-        screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
+            if theNumber == 2:
+                rotateRight()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateRight")
+            if theNumber == -2:
+                rotateLeft()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateLeft")
+                    
+                    
+
+        if isItGameOver == "STILL_PLAYING":
+            screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
@@ -402,7 +465,7 @@ while keepTrying:
         print (zRightScore)
         print (zLeftScore)
         previousScore=score
-        time.sleep(2)
+        time.sleep(0.5)
 
     if isNotBlack(testTuple,screenshot[485,66]) and isNotBlack(testTuple,screenshot[455,96]) and isNotBlack(testTuple,screenshot[519,96]) and isNotBlack(testTuple,screenshot[486,96]):
         pytesseract.tesseract_cmd = path_to_tesseract
@@ -411,20 +474,30 @@ while keepTrying:
         moreLeftOrRight = 0
         with open("Results.txt","a") as f:
             f.write("\nZ figure :")
-        for x in range (7):
+        for x in range (3):
             rightScore = -oRightScore
-            theNumber = random.randint(rightScore, oLeftScore)
-            if theNumber < 0:
+            theNumber = random.randint(-2, 2)
+            if theNumber == 1 :
                 turnRight()
                 with open("Results.txt","a") as f:
                     f.write("(Right")
-                    moreLeftOrRight = moreLeftOrRight - 1
-            if theNumber > 0:
+            if theNumber == -1:
                 turnLeft()
                 with open("Results.txt","a") as f:
                     f.write("(Left")
-                    moreLeftOrRight = moreLeftOrRight + 1
-        screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
+            if theNumber == 2:
+                rotateRight()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateRight")
+            if theNumber == -2:
+                rotateLeft()
+                with open("Results.txt","a") as f:
+                    f.write("(rotateLeft")
+                    
+                    
+
+        if isItGameOver == "STILL_PLAYING":
+            screenshotTwo.save(f"Images/image nr {imageNumber}{imageNumberTwo}.jpg" )
         with open("Results.txt","a") as f:
             f.write(f"[image nr {imageNumber}{imageNumberTwo}.jpg")
         score = pytesseract.image_to_string(scoreboard)
@@ -452,7 +525,7 @@ while keepTrying:
         print (tRightScore)
         print (tLeftScore)
         previousScore=score
-        time.sleep(2)
+        time.sleep(0.5)
         
     
     
